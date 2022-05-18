@@ -46,7 +46,7 @@ print("  X P(X=x) Obs.Fr  Ex.Fre   xi ")
 print("----------------------------------")
 for x in range(7):
     c=math.factorial(n)/(math.factorial(x)*math.factorial(n-x))
-    Pr.append(c*p*x*q*(n-x))
+    Pr.append(c*p**x*q**(n-x))
     E.append(Pr[x]*N)
     xi.append((f[x]-E[x])**2/E[x])
     print("%2.2f %2.2f  %4.2f   %3.2f  %3.2f"%(x,Pr[x],f[x],E[x],xi[x]))
@@ -61,8 +61,7 @@ else:
     print("The given data cannot be fitted in binomial distribution at 1% LOS")
 ```
 # Output:
-
-![image](https://user-images.githubusercontent.com/74660507/166260133-4cd3e474-719b-43a6-b15f-8b33ec2fa272.png)
+![mat-1](https://user-images.githubusercontent.com/75234912/168961456-919c4a80-ff0c-4c2c-8e44-a72ae37027e6.png)
 
 # Results:
 
